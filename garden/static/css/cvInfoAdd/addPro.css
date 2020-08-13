@@ -1,0 +1,129 @@
+body {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../media/photo/background.png");
+}
+
+#content {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  bottom: 10%;
+  width: 50%;
+  top: 10%;
+  background-color: white;
+  font-weight: bold;
+  font-size: 120%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#tit {
+  position: absolute;
+  left: 25%;
+  top: 6%;
+  font-size: 150%;
+  color: purple;
+}
+
+#time {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+#timeInp {
+  position: absolute;
+  padding-left: 1%;
+  left: 28%;
+  top: 19%;
+  width: 40%;
+  height: 4%;
+  border-radius: 5%;
+}
+
+#title {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
+#titleInp {
+  position: absolute;
+  padding-left: 1%;
+  left: 28%;
+  top: 29%;
+  width: 40%;
+  height: 4%;
+  border-radius: 5%;
+}
+
+#description {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+}
+
+#descriptionInp {
+  position: absolute;
+  padding-left: 1%;
+  left: 28%;
+  top: 39%;
+  width: 40%;
+  height: 4%;
+  border-radius: 5%;
+}
+
+#role1 {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+
+#role1Inp {
+  position: absolute;
+  padding-left: 1%;
+  left: 28%;
+  top: 49%;
+  width: 40%;
+  height: 4%;
+  border-radius: 5%;
+}
+
+#role2 {
+  position: absolute;
+  left: 10%;
+  top: 60%;
+}
+
+#role2Inp {
+  position: absolute;
+  padding-left: 1%;
+  left: 28%;
+  top: 59%;
+  width: 40%;
+  height: 4%;
+  border-radius: 5%;
+}
+
+#submit {
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
+  background-color: green;
+  color: white;
+  width: 25%;
+  height: 6%;
+}
+
+#cancel {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+  background-color: #a60512;
+  color: white;
+  width: 25%;
+  height: 6%;
+}

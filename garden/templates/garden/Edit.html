@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Usage Note -->
+
+<!-- This page is to design and preview the layout of the new blog article -->
+<!-- After that, I will write the data directly into django admin system -->
+<!-- Besides, the image used in the article is added into the source file each time, rather than into database -->
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Talented GEEK's Article Editer</title>
+    <link
+      href="../../static/css/Article.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <script type="text/javascript" src="../../static/js/Article.js"></script>
+  </head>
+
+  <body>
+    <div class="menus"></div>
+
+    <div id="content">
+      <div class="blockA">
+        <div class="titleField">
+          <label id="title">
+            <!--Write the title here-->
+            <label style="color: red;">POST #4 :</label> CV page with TDD
+          </label>
+        </div>
+
+        <div class="contentField">
+          <label style="font-weight: bold;">Abstract:&nbsp;</label>
+
+          <label id="abstract">
+            <!--Write the Abstract here-->
+            I will introduce how I test my CV page using Test-Driven-Development
+            method in this article
+          </label>
+
+          <hr />
+
+          <label id="content">
+            <!--Write the Content here-->
+
+            <br /><br />
+            <img
+              src="../../static/media/photo/blog/Post4.jpeg"
+              style="width: 98%;"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

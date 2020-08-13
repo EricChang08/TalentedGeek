@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Add New Interest</title>
+    <link
+      href="../../static/css/cvInfoAdd/addInterest.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="../../static/js/cvInfoAdd/addInterest.js?v=001"
+    ></script>
+  </head>
+
+  <body>
+    <div id="content">
+      <label id="tit">ADD YOUR NEW INTEREST</label>
+      {% csrf_token %}
+      <form method="POST">
+        {% for field in form %} {% csrf_token %}
+        <div class="field">
+          <label for="{{ field.label }}" id="{{ field.label }}"
+            >{{ field.label }}</label
+          >
+          {{field}}
+        </div>
+        {% endfor %}
+
+        <input type="submit" id="submit" value="SUBMIT" />
+      </form>
+      <button id="cancel" onclick="window.location.href='../../cv/edit?type'">
+        CANCEL
+      </button>
+    </div>
+  </body>
+</html>

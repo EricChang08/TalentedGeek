@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Talented GEEK's Blog</title>
+    <link
+      href="../../static/css/Blog.css?version=001"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="../../static/js/Blog.js?version=001"
+    ></script>
+
+
+  </head>
+
+  <body>
+    <div class="menus">
+      <div id="signitureField">
+        <img id="signiture" src="../../static/media/photo/home/signiture.png" />
+      </div>
+
+      <div 
+         onmouseover="menuHovered('homeField')"
+         onmouseout="menuUnHovered('homeField')"
+         onclick="window.location.href='../'" id="homeField">
+        <label id="homeMenu">HOME</label>
+      </div>
+
+      <div 
+         onmouseover="menuHovered('cvField')"
+         onmouseout="menuUnHovered('cvField')"
+         onclick="window.location.href='../cv'" id="cvField">
+        <label id="cvMenu">CV</label>
+      </div>
+
+      <div 
+         onmouseover="menuHovered('blogField')"
+         onmouseout="menuUnHovered('blogField')"
+         onclick="window.location.href=''" id="blogField">
+        <label id="blogMenu">BLOG</label>
+      </div>
+
+      <input id="searchInp" value="Search here" type="text" />
+      <img id="searchIcon" src="../../static/media/photo/home/search.jpeg" />
+    </div>
+
+    <div class="tagMenu">
+      <div class="tags" id="general" 
+         onmouseover="tagHovered('general')"
+         onmouseout="tagUnHovered('general' , '{{tagId}}')"  
+         onclick="window.location.href='../blog'">
+        <label>General</label>
+      </div>
+       {% for tag in popTag %}
+         <div class="tags" id="tag{{ forloop.counter }}" 
+         onmouseover="tagHovered('tag{{ forloop.counter }}')"
+         onmouseout="tagUnHovered('tag{{ forloop.counter }}' , '{{tagId}}')" 
+         onclick="window.location.href='tag?id={{tag.id}}&&tagId=tag{{ forloop.counter }}'">
+           <label >{{ tag.tag }}</label>
+         </div>
+       {% endfor %}
+    </div>
+
+        <script>
+            if("{{tagId}}" === ""){
+              loadGeneral();
+            }else{
+              loadTag("{{tagId}}");
+            }
+        </script>
+
+    <div class="titleMenu">
+      {% for art in articles %}
+      {% autoescape off %}
+        <div class="titles" id="title{{ forloop.counter }}" 
+        onmouseover="titleHovered('name{{ forloop.counter }}')"
+        onmouseout="titleUnHovered('name{{ forloop.counter }}')" 
+        onclick="window.location.href='article?article={{art.id}}&&tagId={{tagId}}'">
+          <label id="name{{ forloop.counter }}" style="color: black; font-size: 150%; font-weight: bold; font-family:'Franklin Gothic Medium;'"> {{ art.title }}</label><br>
+          <label id="abs{{ forloop.counter }}"> {{ art.abstract }} </label>
+        </div>
+        {% endautoescape %}
+      {% endfor %}
+    </div>
+</html>

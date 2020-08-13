@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Talented GEEK's CV Editer</title>
+    <link href="../../static/css/cvEdit.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../static/js/cvEdit.js"></script>
+  </head>
+
+  <body>
+    <div class="menus">
+      <div id="signitureField">
+        <img id="signiture" src="../../static/media/photo/home/signiture.png" />
+      </div>
+
+      <div
+        onmouseover="menuHovered('homeField')"
+        onmouseout="menuUnHovered('homeField')"
+        onclick="window.location.href='../'"
+        id="homeField"
+      >
+        <label id="homeMenu">HOME</label>
+      </div>
+
+      <div
+        onmouseover="menuHovered('cvField')"
+        onmouseout="menuUnHovered('cvField')"
+        onclick="window.location.href='../cv'"
+        id="cvField"
+      >
+        <label id="cvMenu">CV</label>
+      </div>
+
+      <div
+        onmouseover="menuHovered('blogField')"
+        onmouseout="menuUnHovered('blogField')"
+        onclick="window.location.href='../blog'"
+        id="blogField"
+      >
+        <label id="blogMenu">BLOG</label>
+      </div>
+
+      <input id="searchInp" value="Search here" type="text" />
+      <img id="searchIcon" src="../../static/media/photo/home/search.jpeg" />
+    </div>
+
+    <div class="content">
+      <div class="summary">
+        <label id="name">ZHOUHAN ZHANG</label>
+        <div id="summaryField">
+          {% for sum in summary %}
+          <li>{{sum.description}}</li>
+          <br />
+          {% endfor %}
+        </div>
+
+        <img id="summaryPhoto" src="../../static/media/photo/cv/cover.png" />
+      </div>
+
+      <div class="skill">
+        <label id="skillTitle">SKILLS</label>
+
+        <div id="A">
+          <label>{{skill1.title}}</label>
+          <div id="progressbar">
+            <div id="{{skill1.degree}}">{{skill1.degree}}</div>
+          </div>
+        </div>
+
+        <div id="B">
+          <label>{{skill2.title}}</label>
+          <div id="progressbar">
+            <div id="{{skill2.degree}}">{{skill2.degree}}</div>
+          </div>
+        </div>
+
+        <div id="C">
+          <label>{{skill3.title}}</label>
+          <div id="progressbar">
+            <div id="{{skill3.degree}}">{{skill3.degree}}</div>
+          </div>
+        </div>
+
+        <div id="D">
+          <label>{{skill4.title}}</label>
+          <div id="progressbar">
+            <div id="{{skill4.degree}}">{{skill4.degree}}</div>
+          </div>
+        </div>
+
+        <div id="E">
+          <label>{{skill5.title}}</label>
+          <div id="progressbar">
+            <div id="{{skill5.degree}}">{{skill5.degree}}</div>
+          </div>
+        </div>
+
+        <div id="F">
+          <label>{{skill6.title}}</label>
+          <div id="progressbar">
+            <div id="{{skill6.degree}}">{{skill6.degree}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rest">
+        <div
+          onmouseover="contentHovered('project')"
+          onmouseout="contentUnHovered('project')"
+          class="project"
+        >
+          <div id="projectTitle">
+            PROJECT EXPERIENCE
+          </div>
+
+          <label id="add" onclick="window.location.href='edit/project'"
+            >Add</label
+          >
+        </div>
+
+        {% for pr in project %}
+        <div class="projectField">
+          <label
+            id="del"
+            onclick="window.location.href='edit?type=proDel&id={{pr.id}}'"
+            >Delete</label
+          ><br />
+          <label id="time">{{pr.time}}</label>
+          <label id="title">{{pr.title}}</label><br /><br />
+          <label id="description">{{pr.description}}</label><br /><br />
+          <label id="role">Roles: </label>
+          <label id="role1">&#183; {{pr.role1}}</label>
+          <label id="role2">&#183; {{pr.role2}}</label>
+          <hr />
+        </div>
+        {% endfor %}
+
+        <div
+          onmouseover="contentHovered('education')"
+          onmouseout="contentUnHovered('education')"
+          class="education"
+        >
+          <div id="eduTitle">
+            EDUCATION EXPERIENCE
+          </div>
+
+          <label id="add" onclick="window.location.href='edit/education'"
+            >Add</label
+          >
+        </div>
+
+        {% for edu in education %}
+        <div class="educationField">
+          <label
+            id="del"
+            onclick="window.location.href='edit?type=eduDel&id={{edu.id}}'"
+            >Delete</label
+          ><br />
+          <label id="time"
+            >{{edu.startTime}} &nbsp;&nbsp;to
+            &nbsp;&nbsp;{{edu.endTime}}:</label
+          >
+          <label id="uni">{{edu.uni}}</label><br />
+          <label id="major">{{edu.major}}</label><br />
+          <label id="perform">{{edu.perform}}</label><br /><br />
+          <label id="addition">Revelant Modules:</label>
+          <label id="module">{{edu.module}}</label><br />
+          <hr />
+        </div>
+        {% endfor %}
+
+        <div
+          onmouseover="contentHovered('interest')"
+          onmouseout="contentUnHovered('interest')"
+          class="interest"
+        >
+          <div id="interestTitle">
+            INTERESTS
+          </div>
+          <label id="add" onclick="window.location.href='edit/interest'"
+            >Add</label
+          >
+        </div>
+
+        {% for it in interest %}
+        <div class="interestField">
+          <label
+            id="del"
+            onclick="window.location.href='edit?type=intDel&id={{it.id}}'"
+            >Delete</label
+          ><br />
+          <label id="title">{{it.title}}</label>
+          <label id="description"> --- {{it.description}}</label><br />
+          <hr />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+body {
+  position: absolute;
+  left: -1%;
+  right: -1%;
+  width: 101%;
+  height: 100%;
+  background-image: url("../media/photo/background.png");
+}
+
+.menus {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  top: -1%;
+  left: 0%;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+#signitureField {
+  position: absolute;
+  left: 1%;
+  top: 0%;
+  width: 12%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+#signiture {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+#homeField {
+  position: absolute;
+  left: 14%;
+  top: 19%;
+  width: 6%;
+  height: 60%;
+}
+
+#homeMenu {
+  position: absolute;
+  top: 32%;
+  left: 24%;
+}
+
+#cvField {
+  position: absolute;
+  left: 20.5%;
+  top: 19%;
+  width: 4%;
+  height: 60%;
+}
+
+#cvMenu {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+}
+
+#blogField {
+  position: absolute;
+  left: 25%;
+  top: 19%;
+  width: 6%;
+  height: 60%;
+  background-color: whitesmoke;
+  color: black;
+}
+
+#blogMenu {
+  position: absolute;
+  top: 32%;
+  left: 23%;
+}
+
+#searchInp {
+  position: absolute;
+  width: 10%;
+  height: 40%;
+  right: 8%;
+  top: 25%;
+  border-radius: 10%;
+  color: grey;
+  padding-left: 1%;
+}
+
+#searchIcon {
+  position: absolute;
+  width: 2%;
+  height: 28%;
+  right: 5.5%;
+  top: 35%;
+}
+
+.blockA {
+  position: absolute;
+  top: 7%;
+  left: 9%;
+  width: 52%;
+  bottom: 0%;
+  overflow-y: auto;
+}
+
+.titleField {
+  margin-left: 16%;
+  margin-right: 3%;
+  margin-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 180%;
+  background-color: white;
+}
+
+.contentField {
+  margin-top: 3%;
+  margin-left: 16%;
+  margin-right: 3%;
+  margin-bottom: 0%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: white;
+  font-size: 150%;
+}
+
+.tagMenu {
+  position: absolute;
+  left: 65%;
+  top: 10%;
+  background-color: whitesmoke;
+  width: 15%;
+  height: auto;
+}
+
+.tags {
+  text-align: center;
+  border-width: small;
+  border-color: grey;
+  border-style: solid;
+  padding-left: 3%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+.reviewField {
+  position: absolute;
+  left: 63%;
+  top: 42%;
+  width: 16%;
+  height: 40%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: white;
+  overflow-y: auto;
+}
+
+#favorField {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 10%;
+}
+
+#favorNo {
+  position: absolute;
+  left: 17%;
+  top: 40%;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+#se {
+  position: absolute;
+  left: 0%;
+  top: 10%;
+  width: 100%;
+}
+
+#commentField {
+  position: absolute;
+  left: 0%;
+  top: 21%;
+  width: 100%;
+  height: 79%;
+  overflow-y: auto;
+}
+
+.visit {
+  position: absolute;
+  left: 63%;
+  top: 85%;
+  width: 16%;
+  height: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: white;
+}
+
+#favorPhoto {
+  position: absolute;
+  left: 62%;
+  top: 89%;
+  width: 3%;
+  height: 5%;
+}
+
+#commentInp {
+  position: absolute;
+  left: 66%;
+  top: 88%;
+  width: 13%;
+  height: 6%;
+  resize: none;
+  color: grey;
+}
+
+#commentSub {
+  background-color: rgb(170, 170, 170);
+  position: absolute;
+  left: 80%;
+  top: 88.5%;
+  width: 5%;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: green;
+  color: white;
+}

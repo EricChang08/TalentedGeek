@@ -1,0 +1,389 @@
+body {
+  position: absolute;
+  left: -1%;
+  right: -1%;
+  width: 101%;
+  height: 100%;
+  background-image: url("../media/photo/background.png");
+}
+
+hr {
+  margin-top: 5%;
+}
+
+.menus {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  top: -1%;
+  left: 0%;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+#signitureField {
+  position: absolute;
+  left: 1%;
+  top: 0%;
+  width: 12%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+#signiture {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+#homeField {
+  position: absolute;
+  left: 14%;
+  top: 19%;
+  width: 6%;
+  height: 60%;
+}
+
+#homeMenu {
+  position: absolute;
+  top: 32%;
+  left: 24%;
+}
+
+#cvField {
+  position: absolute;
+  left: 20.5%;
+  top: 19%;
+  width: 4%;
+  height: 60%;
+  background-color: whitesmoke;
+  color: black;
+}
+
+#cvMenu {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+}
+
+#blogField {
+  position: absolute;
+  left: 25%;
+  top: 19%;
+  width: 6%;
+  height: 60%;
+}
+
+#blogMenu {
+  position: absolute;
+  top: 32%;
+  left: 23%;
+}
+
+#cvEdit {
+  position: absolute;
+  left: 31%;
+  top: 19%;
+  width: 6%;
+  height: 60%;
+}
+
+#editMenu {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+}
+
+#searchInp {
+  position: absolute;
+  width: 10%;
+  height: 40%;
+  right: 8%;
+  top: 25%;
+  border-radius: 10%;
+  color: grey;
+  padding-left: 1%;
+}
+
+#searchIcon {
+  position: absolute;
+  width: 2%;
+  height: 28%;
+  right: 5.5%;
+  top: 35%;
+}
+
+.content {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  background-color: white;
+  top: 7%;
+  bottom: -1%;
+  overflow-y: auto;
+}
+
+.summary {
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  font-size: 130%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#summaryPhoto {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+}
+
+#name {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  font-size: 200%;
+}
+
+#summaryPhoto {
+  position: absolute;
+  top: 3%;
+  left: 60%;
+  width: 39%;
+  height: 94%;
+}
+
+#summaryField {
+  position: absolute;
+  left: 7%;
+  top: 35%;
+  width: 50%;
+  height: 80%;
+}
+
+.skill {
+  position: absolute;
+  left: 0%;
+  top: 60%;
+  height: 40%;
+  width: 100%;
+  background-color: burlywood;
+  font-size: 100%;
+}
+
+#skillTitle {
+  position: absolute;
+  left: 42%;
+  top: 8%;
+  font-size: 200%;
+}
+
+.skill #A {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 25%;
+  height: 20%;
+}
+
+.skill #B {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  width: 25%;
+  height: 20%;
+}
+
+.skill #C {
+  position: absolute;
+  left: 70%;
+  top: 30%;
+  width: 25%;
+  height: 20%;
+}
+
+.skill #D {
+  position: absolute;
+  left: 10%;
+  top: 60%;
+  width: 25%;
+  height: 20%;
+}
+
+.skill #E {
+  position: absolute;
+  left: 40%;
+  top: 60%;
+  width: 25%;
+  height: 20%;
+}
+
+.skill #F {
+  position: absolute;
+  left: 70%;
+  top: 60%;
+  width: 25%;
+  height: 20%;
+}
+
+.skill #G {
+  position: absolute;
+  left: 10%;
+  top: 60%;
+  width: 25%;
+  height: 20%;
+}
+
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  top: 70%;
+}
+
+#progressbar #low {
+  background-color: orange;
+  width: 30%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+  padding-left: 3%;
+}
+
+#progressbar #medium {
+  background-color: orange;
+  width: 64%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+  padding-left: 3%;
+}
+
+#progressbar #high {
+  background-color: orange;
+  width: 97%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+  padding-left: 3%;
+}
+
+.rest {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.project {
+  background-color: gainsboro;
+  font-size: 180%;
+  padding-left: 35%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.projectField {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.projectField #time {
+  padding-top: 0%;
+  padding-left: 10%;
+  font-weight: bold;
+}
+
+.projectField #title {
+  padding-left: 5%;
+  font-weight: bold;
+}
+
+.projectField #description {
+  padding-left: 10%;
+}
+
+.projectField #role {
+  padding-left: 10%;
+  font-weight: bold;
+}
+
+.projectField #role1 {
+  padding-left: 2%;
+}
+
+.projectField #role2 {
+  padding-left: 5%;
+}
+
+.education {
+  background-color: gainsboro;
+  font-size: 180%;
+  padding-left: 32%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.educationField {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.educationField #time {
+  padding-top: 0%;
+  padding-left: 10%;
+  font-weight: bold;
+}
+
+.educationField #uni {
+  padding-left: 25%;
+  font-weight: bold;
+}
+
+.educationField #major {
+  padding-left: 55%;
+}
+
+.educationField #perform {
+  padding-left: 57%;
+}
+
+.educationField #addition {
+  padding-left: 10%;
+  font-weight: bold;
+}
+
+.educationField #module {
+  padding-left: 5%;
+}
+
+.interest {
+  background-color: gainsboro;
+  font-size: 180%;
+  padding-left: 40%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.interestField {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.interestField #title {
+  font-weight: bold;
+}

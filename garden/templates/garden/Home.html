@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Home for a Talented GEEK</title>
+    <link href="../../static/css/Home.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../static/js/Home.js"></script>
+  </head>
+
+  <body>
+    <div class="menus">
+      <div id="signitureField">
+        <img id="signiture" src="../../static/media/photo/home/signiture.png" />
+      </div>
+
+      <div
+        onmouseover="menuHovered('homeField')"
+        onmouseout="menuUnHovered('homeField')"
+        onclick="window.location.href=''"
+        id="homeField"
+      >
+        <label id="homeMenu">HOME</label>
+      </div>
+
+      <div
+        onmouseover="menuHovered('cvField')"
+        onmouseout="menuUnHovered('cvField')"
+        onclick="window.location.href='cv/'"
+        id="cvField"
+      >
+        <label id="cvMenu">CV</label>
+      </div>
+
+      <div
+        onmouseover="menuHovered('blogField')"
+        onmouseout="menuUnHovered('blogField')"
+        onclick="window.location.href='blog/'"
+        id="blogField"
+      >
+        <label id="blogMenu">BLOG</label>
+      </div>
+
+      <input id="searchInp" value="Search here" type="text" />
+      <img id="searchIcon" src="../../../static/media/photo/home/search.jpeg" />
+    </div>
+
+    <div class="content">
+      <!--Start-->
+
+      <div class="profile">
+        <label id="profileName">MR. &nbsp;&nbsp;ZHOUHAN ZHANG</label>
+        <div id="introduction">
+          <label id="introA">Hello visitors, welcome to my blog!</label>
+          <label id="introB"
+            >As a Computer Science Practitioner, I am interested in both Data
+            Science and Product Management.</label
+          >
+          <label id="introC"
+            >And I'll share my ideas about them in this tiny website
+          </label>
+          <label id="introD">Have fun reading these :)</label>
+
+          <div
+            onmouseover="jumpHovered('followField')"
+            onmouseout="jumpUnHovered('followField')"
+            onclick="jumpContact('#contacts')"
+            id="followField"
+          >
+            <label id="follow">Click Here to Follow Me</label>
+          </div>
+        </div>
+
+        <img id="myPhoto" src="../../static/media/photo/home/profile.jpeg" />
+      </div>
+
+      <div class="blogButton">
+        <div
+          onmouseover="buttonHovered('MLOpt')"
+          onmouseout="buttonUnHovered('MLOpt')"
+          onclick="window.location.href='blog/tag?id=1&&tagId=1'"
+          id="MLField"
+        >
+          <div id="MLOpt">
+            <label id="ML">Machine Learning</label>
+          </div>
+
+          <img id="Logo" src="../../static/media/photo/home/ML.jpeg" />
+        </div>
+
+        <div
+          onmouseover="buttonHovered('PMOpt')"
+          onmouseout="buttonUnHovered('PMOpt')"
+          onclick="window.location.href='blog/tag?id=2&&tagId=2'"
+          id="PMField"
+        >
+          <div id="PMOpt">
+            <label id="PM">Product Management</label>
+          </div>
+
+          <img id="Logo" src="../../static/media/photo/home/PM.jpeg" />
+        </div>
+
+        <div
+          onmouseover="buttonHovered('dailyOpt')"
+          onmouseout="buttonUnHovered('dailyOpt')"
+          onclick="window.location.href='blog/tag?id=3&&tagId=3'"
+          id="dailyField"
+        >
+          <div id="dailyOpt">
+            <label id="daily">Daily Life</label>
+          </div>
+
+          <img id="Logo" src="../../static/media/photo/home/Daily.jpeg" />
+        </div>
+      </div>
+
+      <div class="general">
+        <div
+          onmouseover="generalHovered('careerGoal')"
+          onmouseout="generalUnHovered('careerGoal')"
+          id="careerGoal"
+        >
+          <img id="careerPic" src="../../static/media/photo/home/career.jpeg" />
+
+          <label id="titleA"> CAREER GOAL </label>
+
+          <div id="careerIntro">
+            <label id="carA"
+              >I'd like to start my career life as a data analyst.</label
+            >
+            <label id="carB"
+              >And work in some big Internet or Consultant Company</label
+            >
+            <label id="carC">
+              Some Possible Titles:
+              <li>Data PM</li>
+              <li>Business Analyst</li>
+              <li>User Analyst</li>
+              <li>Data Algorithmn Engineer</li></label
+            >
+          </div>
+        </div>
+
+        <div
+          onmouseover="generalHovered('education')"
+          onmouseout="generalUnHovered('education')"
+          id="education"
+        >
+          <img
+            id="educationPic"
+            src="../../static/media/photo/home/education.jpeg"
+          />
+
+          <label id="titleB">EDUCATION EXPERIENCE</label>
+
+          <div id="educationIntro">
+            {% for edu in Education %}
+            <!--Just want a new line-->
+            {% if edu.highest and edu.language == 'English' %}
+            <label id="uni">{{edu.uni}}</label>
+            <label id="major">{{edu.major}}</label>
+            <label id="degree">{{edu.perform}}</label>
+            {% endif %}
+            <!--fuck xcode-->
+            {% endfor %}
+          </div>
+        </div>
+
+        <div
+          onmouseover="generalHovered('interests')"
+          onmouseout="generalUnHovered('interests')"
+          id="interests"
+        >
+          <img
+            id="interestPic"
+            src="../../static/media/photo/home/hobby.jpeg"
+          />
+
+          <label id="titleA">MY INTERESTS</label>
+
+          <div id="interestIntro">
+            {% for hobby in hobbies %}
+            <li>{{ hobby.title }}<br /><br /><br /></li>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div id="contacts">
+          <img
+            id="contactPic"
+            src="../../static/media/photo/home/contact.jpeg"
+          />
+
+          <label id="titleB">MY CONTACTS </label>
+
+          <div id="contactIntro">
+            <img id="wechat" src="../../static/media/photo/home/wechat.png" />
+            <img
+              id="facebook"
+              src="../../static/media/photo/home/facebook.png"
+            />
+            <img id="github" src="../../static/media/photo/home/github.png" />
+            <img id="impm" src="../../static/media/photo/home/pm.png" />
+            <img id="kaggle" src="../../static/media/photo/home/kaggle.png" />
+          </div>
+        </div>
+      </div>
+      <!--End-->
+    </div>
+  </body>
+</html>

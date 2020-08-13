@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Talented GEEK's Article</title>
+    <link
+      href="../../static/css/Article.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <script
+      type="text/javascript"
+      src="../../static/js/Article.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="menus">
+      <div id="signitureField">
+        <img
+          id="signiture"
+          src="../../static/media/photo/home/signiture.png"
+        />
+      </div>
+
+      <div 
+          onmouseover="menuHovered('homeField')"
+          onmouseout="menuUnHovered('homeField')"
+          onclick="window.location.href='../'" id="homeField">
+        <label id="homeMenu">HOME</label>
+      </div>
+
+      <div 
+          onmouseover="menuHovered('cvField')"
+          onmouseout="menuUnHovered('cvField')"
+          onclick="window.location.href='../cv'" id="cvField">
+        <label id="cvMenu">CV</label>
+      </div>
+
+      <div 
+           onmouseover="menuHovered('blogField')"
+           onmouseout="menuUnHovered('blogField')"
+           onclick="window.location.href='../blog'" id="blogField">
+        <label id="blogMenu">BLOG</label>
+      </div>
+
+      <input id="searchInp" value="Search here" type="text" />
+      <img
+        id="searchIcon"
+        src="../../static/media/photo/home/search.jpeg"
+      />
+    </div>
+
+    <div id="content">
+      <div class="blockA">
+        <div class="titleField">
+          {% for art in article %}
+          {% autoescape off %}
+          <label id="title">{{art.title}}</label>
+          {% endautoescape %}
+          {% endfor %}
+        </div>
+      
+        <div class="contentField">
+          {% for art in article %}
+          {% autoescape off %}
+          <label style="font-weight: bold">Abstract:&nbsp;</label>
+          <label id="abstract">{{art.abstract}}</label>
+          <hr>
+          <label id="content">{{art.content}}</label>
+          {% endautoescape %}
+          {% endfor %}
+         </div>
+      </div>
+      
+      
+
+      <div class="tagMenu">
+         <div class="tags" id="general" 
+         onmouseover="tagHovered('general')"
+         onmouseout="tagUnHovered('general' , '{{tagId}}')"  
+         onclick="window.location.href='../blog'">
+            <label>General</label>
+          </div>
+          {% for tag in popTag %}
+          <div class="tags" id="tag{{ forloop.counter }}" 
+           onmouseover="tagHovered('tag{{ forloop.counter }}')"
+           onmouseout="tagUnHovered('tag{{ forloop.counter }}' , '{{tagId}}')" 
+           onclick="window.location.href='tag?id={{tag.id}}&&tagId=tag{{ forloop.counter }}'">
+              <label>{{ tag.tag }}</label>
+          </div>
+          {% endfor %}
+      </div>
+      
+          <script>
+            if ("{{tagId}}" === "") {
+              loadGeneral();
+            } else {
+              loadTag("{{tagId}}");
+            }
+          </script>
+
+      <div class="reviewField">
+        <div id="favorField">
+          {% for art in article %}
+          <label id="favorNo" style="color: red;">{{ art.favor }}&nbsp;&nbsp;</lable>
+          <label id="preNote">people favor this article</label>
+            {% endfor %}
+        </div>
+      
+        <hr id="se">
+
+        <div id="commentField" style="padding-left: 2%;">
+          {% for re in review %}
+          <label id="comment" style="font-size: 110%;">{{ re.content }}</label><br>
+          <label id="commentDate" style="color: rgb(71, 70, 70); font-size: 80%;">{{ re.date }}</label><br>
+          <hr>
+          {% endfor %}
+        </div>
+      </div>
+      
+      
+      <img id="favorPhoto" src="../../static/media/photo/blog/Unfavor.jpeg" onclick="changePic('favorPhoto')" >
+      <textarea id="commentInp" cols=50 rows="2">Comment here</textarea>
+      <div id="commentSub">SUBMIT</div>
+    </div>
+  </body>
+</html>
