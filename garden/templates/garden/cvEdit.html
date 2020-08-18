@@ -65,44 +65,44 @@
         <label id="skillTitle">SKILLS</label>
 
         <div id="A">
-          <label>{{skill1.title}}</label>
+          <label id="titleA">{{skill1.title}}</label>
           <div id="progressbar">
-            <div id="{{skill1.degree}}">{{skill1.degree}}</div>
+            <div class="degreeA" id="{{skill1.degree}}">{{skill1.degree}}</div>
           </div>
         </div>
 
         <div id="B">
-          <label>{{skill2.title}}</label>
+          <label id="titleB">{{skill2.title}}</label>
           <div id="progressbar">
-            <div id="{{skill2.degree}}">{{skill2.degree}}</div>
+            <div class="degreeB" id="{{skill2.degree}}">{{skill2.degree}}</div>
           </div>
         </div>
 
         <div id="C">
-          <label>{{skill3.title}}</label>
+          <label id="titleC">{{skill3.title}}</label>
           <div id="progressbar">
-            <div id="{{skill3.degree}}">{{skill3.degree}}</div>
+            <div class="degreeC" id="{{skill3.degree}}">{{skill3.degree}}</div>
           </div>
         </div>
 
         <div id="D">
-          <label>{{skill4.title}}</label>
+          <label id="titleD">{{skill4.title}}</label>
           <div id="progressbar">
-            <div id="{{skill4.degree}}">{{skill4.degree}}</div>
+            <div class="degreeD" id="{{skill4.degree}}">{{skill4.degree}}</div>
           </div>
         </div>
 
         <div id="E">
-          <label>{{skill5.title}}</label>
+          <label id="titleE">{{skill5.title}}</label>
           <div id="progressbar">
-            <div id="{{skill5.degree}}">{{skill5.degree}}</div>
+            <div class="degreeE" id="{{skill5.degree}}">{{skill5.degree}}</div>
           </div>
         </div>
 
         <div id="F">
-          <label>{{skill6.title}}</label>
+          <label id="titleF">{{skill6.title}}</label>
           <div id="progressbar">
-            <div id="{{skill6.degree}}">{{skill6.degree}}</div>
+            <div class="degreeF" id="{{skill6.degree}}">{{skill6.degree}}</div>
           </div>
         </div>
       </div>
@@ -117,7 +117,10 @@
             PROJECT EXPERIENCE
           </div>
 
-          <label id="add" onclick="window.location.href='edit/project'"
+          <label
+            class="proAdd"
+            id="add"
+            onclick="window.location.href='edit/project'"
             >Add</label
           >
         </div>
@@ -129,12 +132,13 @@
             onclick="window.location.href='edit?type=proDel&id={{pr.id}}'"
             >Delete</label
           ><br />
-          <label id="time">{{pr.time}}</label>
-          <label id="title">{{pr.title}}</label><br /><br />
-          <label id="description">{{pr.description}}</label><br /><br />
-          <label id="role">Roles: </label>
-          <label id="role1">&#183; {{pr.role1}}</label>
-          <label id="role2">&#183; {{pr.role2}}</label>
+          <label class="proTime" id="time">{{pr.time}}</label>
+          <label class="proTitle" id="title">{{pr.title}}</label><br /><br />
+          <label class="proDesp" id="description">{{pr.description}}</label
+          ><br /><br />
+          <label class="proRol" id="role">Roles: </label>
+          <label class="proRol1" id="role1">&#183; {{pr.role1}}</label>
+          <label class="proRol2" id="role2">&#183; {{pr.role2}}</label>
           <hr />
         </div>
         {% endfor %}
@@ -148,7 +152,10 @@
             EDUCATION EXPERIENCE
           </div>
 
-          <label id="add" onclick="window.location.href='edit/education'"
+          <label
+            class="eduAdd"
+            id="add"
+            onclick="window.location.href='edit/education'"
             >Add</label
           >
         </div>
@@ -160,15 +167,16 @@
             onclick="window.location.href='edit?type=eduDel&id={{edu.id}}'"
             >Delete</label
           ><br />
-          <label id="time"
+          <label class="eduTime" id="time"
             >{{edu.startTime}} &nbsp;&nbsp;to
             &nbsp;&nbsp;{{edu.endTime}}:</label
           >
-          <label id="uni">{{edu.uni}}</label><br />
-          <label id="major">{{edu.major}}</label><br />
-          <label id="perform">{{edu.perform}}</label><br /><br />
-          <label id="addition">Revelant Modules:</label>
-          <label id="module">{{edu.module}}</label><br />
+          <label class="eduUni" id="uni">{{edu.uni}}</label><br />
+          <label class="eduMajor" id="major">{{edu.major}}</label><br />
+          <label class="eduPerform" id="perform">{{edu.perform}}</label
+          ><br /><br />
+          <label class="eduAddi" id="addition">Revelant Modules:</label>
+          <label class="eduModule" id="module">{{edu.module}}</label><br />
           <hr />
         </div>
         {% endfor %}
@@ -181,7 +189,10 @@
           <div id="interestTitle">
             INTERESTS
           </div>
-          <label id="add" onclick="window.location.href='edit/interest'"
+          <label
+            class="intAdd"
+            id="add"
+            onclick="window.location.href='edit/interest'"
             >Add</label
           >
         </div>
@@ -193,8 +204,9 @@
             onclick="window.location.href='edit?type=intDel&id={{it.id}}'"
             >Delete</label
           ><br />
-          <label id="title">{{it.title}}</label>
-          <label id="description"> --- {{it.description}}</label><br />
+          <label class="intTitle" id="title">{{it.title}}</label>
+          <label class="intDesp" id="description"> --- {{it.description}}</label
+          ><br />
           <hr />
         </div>
         {% endfor %}
